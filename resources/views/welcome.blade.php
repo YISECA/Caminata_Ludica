@@ -17,159 +17,73 @@
          <div id="SLDR-ONE" class="sldr">
             <ul class="wrp animate">
                <li class="elmnt-one">
-                  <div class="wrap"><img src="public/Img/conver.jpg"  height="400">
+                  <div class="wrap"><img src="public/Img/ludica.jpg"  height="400">
                   </div>
                </li>
-               <li class="elmnt-two">
+               <!--<li class="elmnt-two">
                   <div class="wrap"><img src="public/Img/conver1.jpg"  height="400">
                   </div>
                </li>
                <li class="elmnt-three">
                   <div class="wrap"><img src="public/Img/conver2.png"  height="400">
                   </div>
-               </li>
+               </li>-->
             </ul>
          </div>
          <div class="clear"></div>
          <ul class="selectors">
             <li class="focalPoint"><a href="">•</a></li>
-            <li><a href="">•</a></li>
-            <li><a href="">•</a></li>
+            <!--<li><a href="">•</a></li>
+            <li><a href="">•</a></li>-->
          </ul>
       </div>
       <script src="public/Js/jquery.sldr.js"></script>
       <div class="freebirdFormviewerViewHeaderDescription" dir="auto">
-         <p style="line-height: 27px; font-size: 12pt; font-family:arial" align="justify">Para fortalecer las competencias de emprendimiento deportivo, cultural y audiovisual, brindando a nuestros empresarios y emprendedores una oportunidad de relacionamiento, el SENA   y el IDRD extiende una cordial invitación para que nos acompañe en el conversatorio y networking, que tiene como propósito hablar sobre oportunidades de negocios, tendencias de mercado, crecimiento de la industria, innovaciones del sector, entre otros. El evento que se realizará en el marco de la Semana Global del Emprendimiento.
-         </p>
 
-         <p style="line-height: 27px; font-size: 12pt; font-family:arial" align="justify"><strong>Lugar:</strong> Instituto Distrital de recreación y Deporte IDRD (calle 63 No. 59A - 06) Salón Presidente</p>
-         <p style="line-height: 27px; font-size: 12pt; font-family:arial" align="justify"><strong>Fecha:</strong> Jueves 16 de Noviembre de 2017</p>
-         <p style="line-height: 27px; font-size: 12pt; font-family:arial" align="justify"><strong>Hora: </strong>8:30 a.m a 1:00 p.m </p>
-         <p style="line-height: 27px; font-size: 12pt; font-family:arial" align="justify"><strong>Agenda del día:</strong> </p>
-      <ol>
-           <li style="line-height: 27px; font-size: 11pt; font-family:arial" align="justify"><strong>8:30 a 9:15 am</strong> Conversatorio: “Retos y oportunidades de la industria deportiva y la economía naranja”</li>
-           <li style="line-height: 27px; font-size: 11pt; font-family:arial" align="justify"><strong>9:20 a 9:30 am</strong> Lanzamiento de la II Rueda virtual de negocios SENA </li>
-           <li style="line-height: 27px; font-size: 11pt; font-family:arial" align="justify"><strong>9:30 a 10:25 am</strong> Conversatorio: “Del dicho al hecho” Experiencias empresariales de la economía naranja y las industrias deportivas.</li>
-           <li style="line-height: 27px; font-size: 11pt; font-family:arial" align="justify"><strong>10:40 am a 1:00 pm  </strong> Networking.</li>
-      </ol>
-         <br>
+         <center>
+         <li style="line-height: 27px; font-size: 11pt; font-family:arial" align="justify"><strong>Fecha:</strong> Miércoles 07 de febrero de 2018</li>
+         <li style="line-height: 27px; font-size: 11pt; font-family:arial" align="justify"><strong>Horario:</strong> 8:00 a.m. a 2:00 p.m</li>
+         <li style="line-height: 27px; font-size: 11pt; font-family:arial" align="justify"><strong>Lugar:</strong> Sede IDRD(calle 63 # 59A-06) Salón B</li></center>
+
          <link rel="stylesheet" type="text/css" href="public/Css/form.css">
          <form method="POST" action="insertar" id="form_gen" enctype="multipart/form-data">
             <div class="panel-body">
                <!-- nuevo formulario-->
                <div class="panel panel-default">
-                  <div class="panel-heading">
-                     <h3 class="panel-title"><font size="3" color="#1995dc">INFORMACIÓN PERSONAL</font></h3>
-                  </div>
+                  
                   <div class="panel-body">
                      <div class="row">
                      <!--nombres y apellidos-->
                         <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput"><font style="font-family:arial">Nombres Completos </label>
-                           <input required type="text" class="form-control" id="nombre" name="nombre" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput"><font style="font-family:arial">Entidad /Institución</label>
+                           <input required type="text" class="form-control" id="entidad" name="entidad" onkeyup="javascript:this.value=this.value.toUpperCase();">
                         </div>
                         <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Apellidos Completos</label>
-                           <input required type="text" class="form-control" id="apellido" name="apellido" onkeyup="javascript:this.value=this.value.toUpperCase();" ><br>
+                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Encargado que asiste a la Lúdica y Docente</label>
+                           <input required type="text" class="form-control" id="encargado" name="encargado" onkeyup="javascript:this.value=this.value.toUpperCase();" ><br>
                         </div>
 
                         <!-- tipo de documento y número de documento-->
                          <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Tipo de Documento</label>
-                              <select name="tipo_documento" id="tipo_documento" class="form-control" >
-                                   <option value="1">Cédula de Ciudadania</option>
-                                   <option value="2">Cédula de Extranjeria</option>
-                              </select>
+                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Cargo</label>
+                              <input required type="text" class="form-control" id="cargo" name="cargo" onkeyup="javascript:this.value=this.value.toUpperCase();" >
                         </div>
                         <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Número de Documento</label>
-                           <input required type="text" class="form-control" id="cedula" name="cedula">
+                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Teléfono</label>
+                           <input required type="number" class="form-control" id="telefono" name="telefono">
                            <br>
                         </div>
 
                         <!-- gpenero y fecha de nacimiento-->
                         <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Género</label>
-                               <select  required name="genero" id="genero" class="form-control" >
-                                   <option value="">Seleccione</option>
-                                   <option value="1">Masculino</option>
-                                   <option value="2">Femenino</option>
-                               </select>
-                        </div>
-                        <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Fecha de Nacimiento</label>
-                           <input required type="text" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" >
-                           <br>
-                        </div>
-
-                        <!--correo y teléfono-->
-                        <div class="col-xs-6">
                            <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Correo Electrónico</label>
                            <input required type="mail" class="form-control" id="mail" name="mail" >
                         </div>
                         <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Télefono Celular</label>
-                           <input required type="number" class="form-control" id="celular" name="celular"><br>
-                        </div>
-
-                        <!-- dirección y barrio-->
-                        <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2">Dirección</label>
-                           <input required type="text" class="form-control" id="direccion" name="direccion" >
-                        </div>
-                        <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Barrio</label>
-                           <input required type="text" class="form-control" id="barrio" name="barrio"><br>
-                        </div>
-
-                      <!-- localidad y grado de estudio-->
-                         <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Localidad</label>
-                           <select  required name="localidad" id="localidad" class="form-control" >
-                            <option value="">Seleccione</option>
-                                @foreach ($localidades as $localidad)
-                            <option value="{{ $localidad->id_localidad }}">{{ $localidad->localidad}}</option>
-                         @endforeach
-                        </select>
-                        </div>
-                        <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput">Grado de Estudio</label>
-                           <select name="estudio" id="estudio" class="form-control" >
-                              <option value="">Seleccione</option>
-                              <option value="1">Bachiller</option>
-                              <option value="2">Técnico</option>
-                              <option value="3">Técnologo</option>
-                              <option value="4">Profesional Universitario</option> 
-                              <option value="5">Profesional Especializado</option> 
-                           </select><br>
-                        </div>
-
-                       <!--pregunta y grupo poblacional-->
-                        <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="line-height: 20px; font-size: 11pt; font-family:arial" align="justify">¿Que curso o capacitación es necesaria para fortalecer el sector del Deporye, la Recreación  y la Actividad Física?</label>
-                          <select name="pregunta" id="pregunta" class="form-control" >
-                              <option value="">Seleccione</option>
-                              <option value="1">Gestión de Proyectos</option>
-                              <option value="2">Organización de Certamenes Deportivos y Recreativos</option>
-                              <option value="3">Principios del Entrenamiento</option>
-                              <option value="4">Marketing Deportivo</option> 
-                              <option value="5">Nuevas Tendencias de la Preparación Física</option>
-                              <option value="6">Pedagogía en el Deporte</option>
-                              <option value="7">Administración Deportiva</option>
-                              <option value="8">Entrenamiento Deportivo</option>
-                           </select>
-                        </div>
-                        <div class="col-xs-6">
-                           <label class="freebirdFormviewerViewItemsItemItemTitle" for="formGroupExampleInput2" style="line-height: 20px; font-size: 11pt; font-family:arial" align="justify">Grupo Poblacional</label><br><br>
-                           <select name="poblacion" id="poblacion" class="form-control" >
-                              <option value="">Seleccione</option>
-                              <option value="1">SIAB</option>
-                              <option value="2">Escuelas Deportivas</option>
-                           </select><br><br>
+                           
                         </div>
 
                </div>
-               <br>
             
                </fieldset>
                <div class="freebirdFormviewerViewFormContent ">

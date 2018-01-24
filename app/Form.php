@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Form extends Model
 {
-   protected $table = 'conversatorio';
+   protected $table = 'encuentro_ludica';
    protected $primaryKey = 'id';
    protected $fillable = ['localidad'];
 

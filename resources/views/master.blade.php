@@ -84,7 +84,7 @@
 
 
 
-      <title>CONVERSATORIO Y NETWORKING Modelos de negocio de la Economía Naranja, Industria deportiva y recreativa</title>
+      <title>Encuentro Lúdica y Docente</title>
 
   </head>
 
@@ -172,9 +172,7 @@
 
                 <p class="lead">
 
-                <h1><font size="5">CONVERSATORIO Y NETWORKING <br>Modelos de negocio de la Economía Naranja, Industria deportiva y recreativa
-
- </font></h1>
+                <h1><font size="5">Encuentro Lúdica y Docente</font></h1>
               
 
                 </p>

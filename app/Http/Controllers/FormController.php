@@ -60,19 +60,11 @@ class FormController extends BaseController
         <thead>
            <tr>
              <th style="text-transform: capitalize;">id</th>
-             <th style="text-transform: capitalize;">Nombres</th>
-             <th style="text-transform: capitalize;">Apellidos</th> 
-             <th style="text-transform: capitalize;">Documento de identidad</th> 
-             <th style="text-transform: capitalize;">Género</th>  
-             <th style="text-transform: capitalize;">Fecha de Nacimiento</th>          
-             <th style="text-transform: capitalize;">Correo Electrónico</th>
-             <th style="text-transform: capitalize;">Teléfono Celular</th>
-             <th style="text-transform: capitalize;">Dirección</th>
-             <th style="text-transform: capitalize;">Barrio</th>
-             <th style="text-transform: capitalize;">Localidad</th>   
-             <th style="text-transform: capitalize;">Estudio</th>
-             <th style="text-transform: capitalize;">¿Que curso o capacitación es necesaria para fortalecer el sector del Deporye, la Recreación  y la Actividad Física?</th>
-             <th style="text-transform: capitalize;">Grupo Poblacional</th>
+             <th style="text-transform: capitalize;">Entidad/Institución</th>
+             <th style="text-transform: capitalize;">Encargado que asiste a la Lúdica y Docente</th> 
+             <th style="text-transform: capitalize;">Cargo</th> 
+             <th style="text-transform: capitalize;">Teléfono</th>  
+             <th style="text-transform: capitalize;">Correo Electrónico</th>          
             </tr>
         </thead>
         <tbody id="tabla">';
@@ -80,19 +72,11 @@ class FormController extends BaseController
      
 
        $tabla.='<tr><td>'.$value->id.'</td>';
-       $tabla.='<td>'.$value->nombre.'</td>';   
-       $tabla.='<td>'.$value->apellido.'</td>';   
-       $tabla.='<td>'.$value->tipo_documento.' N° '.$value->cedula.'</td>';
-       $tabla.='<td>'.$value->genero.'</td>'; 
-       $tabla.='<td>'.$value->fecha_nacimiento.'</td>';   
-       $tabla.='<td>'.$value->mail.'</td>';    
-       $tabla.='<td>'.$value->celular.'</td>';
-       $tabla.='<td>'.$value->direccion.'</td>';
-       $tabla.='<td>'.$value->barrio.'</td>';
-       $tabla.='<td>'.$value->localidades['localidad'].'</td>';
-       $tabla.='<td>'.$value->estudio.'</td>';
-       $tabla.='<td>'.$value->pregunta.'</td>';
-       $tabla.='<td>'.$value->poblacion.'</td></tr>';
+       $tabla.='<td>'.$value->entidad.'</td>';   
+       $tabla.='<td>'.$value->encargado.'</td>';   
+       $tabla.='<td>'.$value->cargo.'</td>';
+       $tabla.='<td>'.$value->telefono.'</td>';  
+       $tabla.='<td>'.$value->mail.'</td></tr>';
        
 
       }
@@ -124,21 +108,21 @@ class FormController extends BaseController
     {
 
       $post = $request->input();
-      $usuario = Form::where('cedula', $request->input('cedula'))->first(); 
+      //$usuario = Form::where('cedula', $request->input('cedula'))->first(); 
       if (!empty($usuario)) { return view('error',['error' => 'Este usuario ya fue registrado!'] ); exit(); }
       $formulario = new Form([]);
 
         //envio de correo
 
-       if($this->inscritos()<=500)
+       if($this->inscritos()<=1000)
        {
 
         $this->store($formulario, $request->input());
         Mail::send('email', ['user' => $request->input('mail')], function ($m) use ($request) 
         {
 
-            $m->from('no-reply@idrd.gov.co', 'Registro Exitoso  al CONVERSATORIO Y NETWORKING Modelos de negocio de la Economía Naranja, Industria deportiva y recreativa');
-            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Registro Exitoso al CONVERSATORIO Y NETWORKING Modelos de negocio de la Economía Naranja, Industria deportiva y recreativa!');
+            $m->from('no-reply@idrd.gov.co', 'Registro Exitoso  al Encuentro lúdica y Docente');
+            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Registro Exitoso al Registro Exitoso  al Encuentro lúdica y Docente');
 
         });
 
@@ -164,20 +148,11 @@ class FormController extends BaseController
     private function store($formulario, $input)
 
     {
-        $formulario['nombre'] = $input['nombre'];
-        $formulario['apellido'] = $input['apellido'];
-        $formulario['tipo_documento'] = $input['tipo_documento'];
-        $formulario['cedula'] = $input['cedula'];
-        $formulario['genero'] = $input['genero'];
-        $formulario['fecha_nacimiento'] = $input['fecha_nacimiento'];
+        $formulario['entidad'] = $input['entidad'];
+        $formulario['encargado'] = $input['encargado'];
+        $formulario['cargo'] = $input['cargo'];
+        $formulario['telefono'] = $input['telefono'];
         $formulario['mail'] = $input['mail'];
-        $formulario['celular'] = $input['celular'];
-        $formulario['direccion'] = $input['direccion'];
-        $formulario['barrio'] = $input['barrio'];
-        $formulario['localidad'] = $input['localidad'];
-        $formulario['estudio'] = $input['estudio'];
-        $formulario['pregunta'] = $input['pregunta'];
-        $formulario['poblacion'] = $input['poblacion'];
         $formulario->save();
 
         return $formulario;
